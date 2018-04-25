@@ -13,49 +13,29 @@ public class Map implements IGround {
 	private ArrayList<Mission> mapMissions;
 	
 	public Map(String pName, String[][] pArena, ArrayList<Mission> pMyMissions, ArrayList<Item> pMyItems) {
-		this.setName(pName);
-		this.setArena(pArena);
-		this.setMapMissions(pMyMissions);
-		this.setMapItems(pMyItems);
+		this.name = pName;
+		this.arena = pArena;
+		this.mapMissions = pMyMissions;
+		this.mapItems = pMyItems;
 	}
 	
-	
 	public Map() {}
-
 
 	public String getName() {
 		return name;
 	}
 
-	public void setName(String pName) {
-		this.name = pName;
-	}
-
 	public String[][] getArena() {
 		return arena;
-	}
-
-	public void setArena(String[][] pArena) {
-		this.arena = pArena;
-	}
-	
-
-	public void setMapItems(ArrayList<Item> mapItems) {
-		this.mapItems = mapItems;
 	}
 	
 	public ArrayList<Item> getMapItems() {
 		return this.mapItems;
 	}
 	
-	public void setMapMissions(ArrayList<Mission> mapMissions) {
-		this.mapMissions = mapMissions;
-	}
-
 	public ArrayList<Mission> getMapMissions() {
 		return this.mapMissions;
 	}
-
 
 	public ArrayList<Item> addObjetsIntoMap(String pNameItem, int pPowerItem){
 		Item newItem = new Item(pNameItem, pPowerItem);
@@ -88,18 +68,14 @@ public class Map implements IGround {
 		
 	}
 	
-
 	@Override
 	public String type(String pType) {
 		return pType;//Refactorizar después
 	}
-
 
 	@Override
 	public String toString() {
 		return "Map [name=" + name + ", arena=" + Arrays.toString(arena) + ", mapItems=" + mapItems + ", mapMissions="
 				+ mapMissions + "]";
 	}
-
-	
 }

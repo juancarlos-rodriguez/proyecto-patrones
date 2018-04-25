@@ -4,7 +4,7 @@ public class Payment {
 	private int paymentNumber;
 	
 	public Payment(int pPaymentNumber) {
-		this.setPaymentNumber(pPaymentNumber);
+		this.paymentNumber = pPaymentNumber;
 	}
 	
 	public void makePayment() {
@@ -15,14 +15,8 @@ public class Payment {
 		return paymentNumber;
 	}
 
-	public void setPaymentNumber(int pPaymentNumber) {
-		this.paymentNumber = pPaymentNumber;
-	}
-
 	@Override
 	public String toString() {
 		return "Payment [paymentNumber=" + paymentNumber + "]";
 	}
-	
-	
 }

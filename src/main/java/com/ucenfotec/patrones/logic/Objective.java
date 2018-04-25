@@ -5,30 +5,20 @@ public class Objective {
 	private boolean status;
 	
 	public Objective(String pName, boolean pStatus) {
-		this.setName(pName);
-		this.setStatus(pStatus);
+		this.name = pName;
+		this.status = pStatus;
 	}
 
 	public String getName() {
 		return name;
 	}
 
-	public void setName(String pName) {
-		this.name = pName;
-	}
-
 	public boolean isStatus() {
 		return status;
-	}
-
-	public void setStatus(boolean pStatus) {
-		this.status = pStatus;
 	}
 
 	@Override
 	public String toString() {
 		return "Objective [name=" + name + ", status=" + status + "]";
 	}
-	
-	
 }
