@@ -1,1 +1,1 @@
-Map [name=Incubus, arena=[[Ljava.lang.String;@70dea4e, [Ljava.lang.String;@5c647e05, [Ljava.lang.String;@33909752, [Ljava.lang.String;@55f96302, [Ljava.lang.String;@3d4eac69], mapItems=null, mapMissions=null]
+Map [name=El grito del invocador, arena=[[Ljava.lang.String;@5e265ba4, [Ljava.lang.String;@156643d4, [Ljava.lang.String;@123a439b, [Ljava.lang.String;@7de26db8, [Ljava.lang.String;@1175e2db], mapItems=[Object [name=Item 1, power=50]], mapMissions=[Mission [name=Mission 1, objectives=[Objective [name=Objective 1, status=false]]]]]
