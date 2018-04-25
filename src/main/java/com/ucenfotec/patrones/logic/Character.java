@@ -2,7 +2,7 @@ package com.ucenfotec.patrones.logic;
 
 import java.util.ArrayList;
 
-public class Character implements IAttack, IAbility {
+public class Character implements IAttack, IAbility{
 	
 	private String name;
 	private int health;
