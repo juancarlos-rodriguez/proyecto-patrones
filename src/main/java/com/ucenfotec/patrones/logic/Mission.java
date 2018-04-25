@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Mission {
 	private String name;
-	private ArrayList<Objective> objectives;
+	private ArrayList<Objective> objectives = new ArrayList<>();
 	
 	public Mission(String pName, ArrayList<Objective> pMyObjectives) {
 		this.name = pName;

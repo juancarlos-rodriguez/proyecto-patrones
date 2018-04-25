@@ -9,8 +9,8 @@ import java.util.Arrays;
 public class Map implements IGround {
 	private String name;
 	private String[][] arena;
-	private ArrayList<Item> mapItems;
-	private ArrayList<Mission> mapMissions;
+	private ArrayList<Item> mapItems = new ArrayList<>();
+	private ArrayList<Mission> mapMissions = new ArrayList<>();
 	
 	public Map(String pName, String[][] pArena, ArrayList<Mission> pMyMissions, ArrayList<Item> pMyItems) {
 		this.name = pName;
@@ -44,8 +44,9 @@ public class Map implements IGround {
 				this.mapItems.add(newItem);
 			}
 		}catch(Exception error) {
-			error.getClass();
-			error.getMessage();
+			System.out.println("Class " + error.getClass());
+			System.out.println("Message " + error.getMessage());
+			System.out.println("Cause " + error.getCause());
 		}
 		
 		return this.mapItems;
@@ -60,8 +61,9 @@ public class Map implements IGround {
 			 }
 
 		}catch(Exception error) {
-			error.getClass();
-			error.getMessage();
+			System.out.println("Class " + error.getClass());
+			System.out.println("Message " + error.getMessage());
+			System.out.println("Cause " + error.getCause());
 		}
 		
 		return this.mapMissions;
