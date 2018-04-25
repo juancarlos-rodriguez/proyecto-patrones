@@ -13,10 +13,10 @@ public class Character implements IAttack, IAbility {
 	
 	
 	public Character(String pName, int pHealth, int pExperience, int pPower) {
-		this.setName(pName);
-		this.setHealth(pHealth);
-		this.setExperience(pExperience);
-		this.setPower(pPower);
+		this.name = pName;
+		this.health = pHealth;
+		this.experience = pExperience;
+		this.power = pPower;
 	}
 	
 	public Character() {}
@@ -57,32 +57,16 @@ public class Character implements IAttack, IAbility {
 		return name;
 	}
 
-	public void setName(String pName) {
-		this.name = pName;
-	}
-
 	public int getHealth() {
 		return health;
-	}
-
-	public void setHealth(int pHealth) {
-		this.health = pHealth;
 	}
 
 	public int getExperience() {
 		return experience;
 	}
 
-	public void setExperience(int pExperience) {
-		this.experience = pExperience;
-	}
-
 	public int getPower() {
 		return power;
-	}
-
-	public void setPower(int pPower) {
-		this.power = pPower;
 	}
 
 	@Override
