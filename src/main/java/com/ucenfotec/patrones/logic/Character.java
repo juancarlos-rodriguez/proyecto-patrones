@@ -9,7 +9,7 @@ public class Character implements IAttack, IAbility {
 	private int experience;
 	private int power;
 	private ArrayList<Item> myItems;
-	private ArrayList<Mission> myMissions;//Refactorizar (No estoy seguro)
+	private ArrayList<Mission> myMissions;
 	
 	
 	public Character(String pName, int pHealth, int pExperience, int pPower) {
@@ -19,37 +19,33 @@ public class Character implements IAttack, IAbility {
 		this.setPower(pPower);
 	}
 	
-	public Character() {}
-
 	public Item getObject() {
-		return null;//Refactorizar después
+		return null;
 	}
 	
 	public ArrayList<Item> loadObject(Item pItem) {
 		myItems.add(pItem);
-		return myItems;//Refactorizar después
+		return myItems;
 	}
 	
 	public int addExperience() {
-		return 0;//Refactorizar después
+		return 0;
 	}
 	
 	public void moveCharacter() {
-		//Refactorizar después
 	}
 	
 
 	@Override
 	public String ability() {
-		return null;//Refactorizar después
+		return null;
 	}
 
 	@Override
-	public int attack() {
-		Enemy enemy = new Enemy();
-		int myAttack = 0;
-		myAttack = enemy.getHealth() - getPower();
-		return myAttack;//Refactorizar
+	public int attack(Enemy enemy) {
+		int attack = 0;
+		attack = enemy.getHealth() - getPower();
+		return attack;
 	}
 
 	
@@ -89,6 +85,19 @@ public class Character implements IAttack, IAbility {
 	public String toString() {
 		return "Character [name=" + name + ", health=" + health + ", experience=" + experience + ", power=" + power
 				+ ", myItems=" + myItems + ", myMissions=" + myMissions + "]";
+	}
+
+	@Override
+	public void receiveDamage(int pAttack) {
+		int damage = 0;
+		damage = getHealth() - pAttack;
+		setHealth(damage);
+	}
+
+	@Override
+	public int attack(Object character) {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 
 }

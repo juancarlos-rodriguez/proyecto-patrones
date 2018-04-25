@@ -16,8 +16,7 @@ public class Enemy implements IAttack {
 
 
 	@Override
-	public int attack() {
-		Character character = new Character();
+	public int attack( Character character ) {
 		int myAttack = 0;
 		myAttack = character.getHealth() - getPower();
 		return myAttack;//Refactorizar
@@ -58,6 +57,13 @@ public class Enemy implements IAttack {
 	@Override
 	public String toString() {
 		return "Enemy [name=" + name + ", health=" + health + ", power=" + power + "]";
+	}
+
+
+	@Override
+	public int receiveDamage() {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 	
 }
