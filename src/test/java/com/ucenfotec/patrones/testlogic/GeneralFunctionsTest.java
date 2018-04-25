@@ -1,10 +1,10 @@
-/*package com.ucenfotec.patrones.testlogic;
+package com.ucenfotec.patrones.testlogic;
 
-//import static org.junit.Assert.*;
+import static org.junit.Assert.*;
 
-//import org.junit.Test;
+import org.junit.Test;
 
-/*import com.ucenfotec.patrones.logic.GeneralManager;
+import com.ucenfotec.patrones.logic.GeneralManager;
 import com.ucenfotec.patrones.logic.Map;
 import com.ucenfotec.patrones.logic.Mission;
 
@@ -41,4 +41,4 @@ public class GeneralFunctionsTest {
 	public void createObjectivesMissionTest() {
 		assertEquals(missionMapTest.getObjectives(),missionMapTest.addObjetivesIntoMission("Objective1", false));
 	}
-}*/
+}

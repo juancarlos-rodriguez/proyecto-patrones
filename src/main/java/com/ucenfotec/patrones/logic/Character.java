@@ -9,10 +9,10 @@ public class Character implements IAttack, IAbility {
 	private int experience;
 	private int power;
 	private ArrayList<Item> myItems = new ArrayList<>();
-	private ArrayList<Mission> myMissions = new ArrayList<>();//Refactorizar (No estoy seguro)
-	
-	
-	public Character(String pName, int pHealth, int pExperience, int pPower) {
+    private ArrayList<Mission> myMissions;
+
+
+    public Character(String pName, int pHealth, int pExperience, int pPower) {
 		this.name = pName;
 		this.health = pHealth;
 		this.experience = pExperience;
@@ -22,44 +22,44 @@ public class Character implements IAttack, IAbility {
 	public Character() {}
 
 	public Item getObject() {
-		return null;//Refactorizar después
+		return null;
 	}
 	
 	public ArrayList<Item> loadObject(Item pItem) {
 		myItems.add(pItem);
-		return myItems;//Refactorizar después
+		return myItems;
 	}
 	
 	public int addExperience() {
-		return 0;//Refactorizar después
+		return 0;
 	}
 	
 	public void moveCharacter() {
-		//Refactorizar después
 	}
 	
 
 	@Override
 	public String ability() {
-		return null;//Refactorizar después
+		return null;
 	}
 
 	@Override
-	public int attack() {
-		Enemy enemy = new Enemy();
-		int myAttack = 0;
-		myAttack = enemy.getHealth() - getPower();
-		return myAttack;//Refactorizar
-	}
+    public void attack(Enemy enemy) {
+        enemy.receiveDamage(this.getPower());
+    }
 
-	
-	public String getName() {
+
+    public String getName() {
 		return name;
 	}
 
 	public int getHealth() {
 		return health;
 	}
+
+    private void setHealth(int health) {
+        this.health = health;
+    }
 
 	public int getExperience() {
 		return experience;
@@ -74,5 +74,15 @@ public class Character implements IAttack, IAbility {
 		return "Character [name=" + name + ", health=" + health + ", experience=" + experience + ", power=" + power
 				+ ", myItems=" + myItems + ", myMissions=" + myMissions + "]";
 	}
+
+    @Override
+    public void receiveDamage(int pAttack) {
+        if ((this.getHealth() - pAttack) > 0) {
+            this.setHealth(this.getHealth() - pAttack);
+        } else {
+            this.setHealth(0);
+        }
+    }
+
 
 }
