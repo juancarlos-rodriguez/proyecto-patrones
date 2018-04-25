@@ -8,8 +8,8 @@ public class Character implements IAttack, IAbility {
 	private int health;
 	private int experience;
 	private int power;
-	private ArrayList<Item> myItems;
-	private ArrayList<Mission> myMissions;//Refactorizar (No estoy seguro)
+	private ArrayList<Item> myItems = new ArrayList<>();
+	private ArrayList<Mission> myMissions = new ArrayList<>();//Refactorizar (No estoy seguro)
 	
 	
 	public Character(String pName, int pHealth, int pExperience, int pPower) {
