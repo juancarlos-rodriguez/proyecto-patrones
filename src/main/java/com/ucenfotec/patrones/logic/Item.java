@@ -5,8 +5,9 @@ public class Item {
 	private int power;
 	
 	public Item(String pName, int pPower) {
-		this.setName(pName);
-		this.setPower(pPower);
+
+		this.name = pName;
+		this.power = pPower;
 	}
 	
 	public int addPowerToCharacterByItem() {
@@ -17,16 +18,8 @@ public class Item {
 		return name;
 	}
 
-	public void setName(String pName) {
-		this.name = pName;
-	}
-
 	public int getPower() {
 		return power;
-	}
-
-	public void setPower(int pPower) {
-		this.power = pPower;
 	}
 
 	@Override

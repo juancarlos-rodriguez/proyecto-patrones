@@ -27,7 +27,7 @@ public class ProyectoPatronesApplication {
                 option = readOption();
                 stop = executeOption(option);
             } catch (Exception e) {
-                out.println("Digite una opcion correcta");
+                out.println("Digite una opcioón correcta");
             }
 
         }while(stop != true);
