@@ -9,53 +9,33 @@ import java.util.Arrays;
 public class Map implements IGround {
 	private String name;
 	private String[][] arena;
-	private ArrayList<Item> mapItems;
-	private ArrayList<Mission> mapMissions;
+	private ArrayList<Item> mapItems = new ArrayList<>();
+	private ArrayList<Mission> mapMissions = new ArrayList<>();
 	
 	public Map(String pName, String[][] pArena, ArrayList<Mission> pMyMissions, ArrayList<Item> pMyItems) {
-		this.setName(pName);
-		this.setArena(pArena);
-		this.setMapMissions(pMyMissions);
-		this.setMapItems(pMyItems);
+		this.name = pName;
+		this.arena = pArena;
+		this.mapMissions = pMyMissions;
+		this.mapItems = pMyItems;
 	}
 	
-	
 	public Map() {}
-
 
 	public String getName() {
 		return name;
 	}
 
-	public void setName(String pName) {
-		this.name = pName;
-	}
-
 	public String[][] getArena() {
 		return arena;
-	}
-
-	public void setArena(String[][] pArena) {
-		this.arena = pArena;
-	}
-	
-
-	public void setMapItems(ArrayList<Item> mapItems) {
-		this.mapItems = mapItems;
 	}
 	
 	public ArrayList<Item> getMapItems() {
 		return this.mapItems;
 	}
 	
-	public void setMapMissions(ArrayList<Mission> mapMissions) {
-		this.mapMissions = mapMissions;
-	}
-
 	public ArrayList<Mission> getMapMissions() {
 		return this.mapMissions;
 	}
-
 
 	public ArrayList<Item> addObjetsIntoMap(String pNameItem, int pPowerItem){
 		Item newItem = new Item(pNameItem, pPowerItem);
@@ -64,8 +44,9 @@ public class Map implements IGround {
 				this.mapItems.add(newItem);
 			}
 		}catch(Exception error) {
-			error.getClass();
-			error.getMessage();
+			System.out.println("Class " + error.getClass());
+			System.out.println("Message " + error.getMessage());
+			System.out.println("Cause " + error.getCause());
 		}
 		
 		return this.mapItems;
@@ -80,26 +61,23 @@ public class Map implements IGround {
 			 }
 
 		}catch(Exception error) {
-			error.getClass();
-			error.getMessage();
+			System.out.println("Class " + error.getClass());
+			System.out.println("Message " + error.getMessage());
+			System.out.println("Cause " + error.getCause());
 		}
 		
 		return this.mapMissions;
 		
 	}
 	
-
 	@Override
 	public String type(String pType) {
 		return pType;//Refactorizar después
 	}
-
 
 	@Override
 	public String toString() {
 		return "Map [name=" + name + ", arena=" + Arrays.toString(arena) + ", mapItems=" + mapItems + ", mapMissions="
 				+ mapMissions + "]";
 	}
-
-	
 }

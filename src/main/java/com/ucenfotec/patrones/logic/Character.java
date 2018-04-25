@@ -8,15 +8,15 @@ public class Character implements IAttack, IAbility{
 	private int health;
 	private int experience;
 	private int power;
-	private ArrayList<Item> myItems;
-	private ArrayList<Mission> myMissions;
+	private ArrayList<Item> myItems = new ArrayList<>();
+	private ArrayList<Mission> myMissions = new ArrayList<>();//Refactorizar (No estoy seguro)
 	
 	
 	public Character(String pName, int pHealth, int pExperience, int pPower) {
-		this.setName(pName);
-		this.setHealth(pHealth);
-		this.setExperience(pExperience);
-		this.setPower(pPower);
+		this.name = pName;
+		this.health = pHealth;
+		this.experience = pExperience;
+		this.power = pPower;
 	}
 	
 	public Item getObject() {
@@ -53,32 +53,16 @@ public class Character implements IAttack, IAbility{
 		return name;
 	}
 
-	public void setName(String pName) {
-		this.name = pName;
-	}
-
 	public int getHealth() {
 		return health;
-	}
-
-	public void setHealth(int pHealth) {
-		this.health = pHealth;
 	}
 
 	public int getExperience() {
 		return experience;
 	}
 
-	public void setExperience(int pExperience) {
-		this.experience = pExperience;
-	}
-
 	public int getPower() {
 		return power;
-	}
-
-	public void setPower(int pPower) {
-		this.power = pPower;
 	}
 
 	@Override
@@ -91,7 +75,7 @@ public class Character implements IAttack, IAbility{
 	public void receiveDamage(int pAttack) {
 		int damage = 0;
 		damage = getHealth() - pAttack;
-		setHealth(damage);
+		this.health = damage;
 	}
 
 	@Override
