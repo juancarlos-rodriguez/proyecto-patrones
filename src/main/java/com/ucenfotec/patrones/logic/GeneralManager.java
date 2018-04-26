@@ -5,6 +5,9 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 
+import com.ucenfotec.personajes.Character;
+import com.ucenfotec.personajes.Enemy;
+
 public class GeneralManager {
 	public boolean createCharacter(String pName, int pHealth, int pExperience, int pPower){
         boolean valid;

@@ -1,4 +1,4 @@
-package com.ucenfotec.patrones.logic;
+package com.ucenfotec.personajes;
 
 public class Enemy {
 	private String name;
