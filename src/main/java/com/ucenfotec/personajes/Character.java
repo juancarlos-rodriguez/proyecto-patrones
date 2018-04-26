@@ -1,6 +1,9 @@
-package com.ucenfotec.patrones.logic;
+package com.ucenfotec.personajes;
 
 import java.util.ArrayList;
+
+import com.ucenfotec.patrones.logic.Item;
+import com.ucenfotec.patrones.logic.Mission;
 
 public class Character implements IAttack, IAbility {
 	

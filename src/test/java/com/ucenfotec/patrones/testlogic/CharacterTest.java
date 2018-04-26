@@ -2,9 +2,10 @@ package com.ucenfotec.patrones.testlogic;
 
 import static org.junit.Assert.*;
 import org.junit.Test;
-import com.ucenfotec.patrones.logic.Enemy;
-import com.ucenfotec.patrones.logic.Character;
+
 import com.ucenfotec.patrones.logic.GeneralManager;
+import com.ucenfotec.personajes.Character;
+import com.ucenfotec.personajes.Enemy;
 
 public class CharacterTest {
     static GeneralManager managerTest = new GeneralManager();

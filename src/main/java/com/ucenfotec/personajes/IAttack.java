@@ -1,4 +1,4 @@
-package com.ucenfotec.patrones.logic;
+package com.ucenfotec.personajes;
 
 public interface IAttack {
 	public void attack(Enemy enemy);
