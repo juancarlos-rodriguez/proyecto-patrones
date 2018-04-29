@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import com.ucenfotec.patrones.logic.Item;
 import com.ucenfotec.patrones.logic.Mission;
 
-public class Character implements IAttack, IAbility {
+public class Heroe extends Character implements IAbility {
 	
 	private String name;
 	private int health;
@@ -14,7 +14,7 @@ public class Character implements IAttack, IAbility {
     private ArrayList<Mission> myMissions;
 
 
-    public Character(String pName, int pHealth, int pExperience, int pPower) {
+    public Heroe(String pName, int pHealth, int pExperience, int pPower) {
 		this.name = pName;
 		this.health = pHealth;
 		this.experience = pExperience;
@@ -36,17 +36,6 @@ public class Character implements IAttack, IAbility {
 	
 	public void moveCharacter() {
 	}
-	
-
-	@Override
-	public String ability() {
-		return null;
-	}
-
-	@Override
-    public void attack(Enemy enemy) {
-        enemy.receiveDamage(this.getPower());
-    }
 
     public String getName() {
 		return name;
@@ -82,4 +71,8 @@ public class Character implements IAttack, IAbility {
         }
     }
 
+	@Override
+	public void attack(Character enemy) {
+		enemy.receiveDamage(this.getPower());
+	}
 }
