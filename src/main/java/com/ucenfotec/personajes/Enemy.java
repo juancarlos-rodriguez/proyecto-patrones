@@ -1,6 +1,6 @@
 package com.ucenfotec.personajes;
 
-public class Enemy {
+public class Enemy extends Character implements IAbility{
 	private String name;
 	private int health;
 	private int power;
@@ -12,12 +12,6 @@ public class Enemy {
 	}
 	
 	public Enemy() {}
-	// Para que los dos reciban un enemigo con las mismas caracteristicas me parece que enemy y character tienen que heredar de una clase abstracta
-//	@Override
-//	public void attack(Character character) {
-//		int myAttack = 0;
-//		myAttack = character.getHealth() - getPower();
-//	}
 	
 	public String getName() {
 		return name;
@@ -40,12 +34,12 @@ public class Enemy {
 		return "Enemy [name=" + name + ", health=" + health + ", power=" + power + "]";
 	}
 	
-//	@Override
-//	public void receiveDamage(int pAttack) {
-//		if ((this.getHealth() - pAttack) > 0) {
-//			this.setHealth(this.getHealth() - pAttack);
-//		} else {
-//			this.setHealth(0);
-//		}
-//	}
+	@Override
+	public void receiveDamage(int pAttack) {
+		if ((this.getHealth() - pAttack) > 0) {
+			this.setHealth(this.getHealth() - pAttack);
+		} else {
+			this.setHealth(0);
+		}
+	}
 }
