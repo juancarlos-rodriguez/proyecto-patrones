@@ -30,7 +30,7 @@ public class CalcularDestino {
 			return true;
 			
 			case "E":
-				System.out.println("Has encontrado un Enemigo");
+				System.out.println("Enemigo a la vista!");
 			return true;
 			
 			default:

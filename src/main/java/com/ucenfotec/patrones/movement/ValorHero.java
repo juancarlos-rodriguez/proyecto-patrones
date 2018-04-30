@@ -1,6 +1,7 @@
 package com.ucenfotec.patrones.movement;
 
 import com.ucenfotec.patrones.logic.Hero;
+import com.ucenfotec.personajes.Heroe;
 
 public class ValorHero {
 	public static String valorEnMapa() {
@@ -9,14 +10,14 @@ public class ValorHero {
 		return hero;
 	};
 	
-	public static Hero nuevoHeroe() {
+	public static Heroe nuevoHeroe() {
 		String nombre = "Heroe";
 		
 		int poder = 50;
 		int vida = 100;
 		int experiencia = 10;
 		
-		Hero heroe = new Hero(nombre,vida,experiencia,poder);
+		Heroe heroe = new Heroe(nombre,vida,experiencia,poder);
 		
 		return heroe;
 	}

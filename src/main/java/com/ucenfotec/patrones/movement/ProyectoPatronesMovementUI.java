@@ -9,12 +9,15 @@ import com.ucenfotec.patrones.logic.*;
 import com.ucenfotec.patrones.memory.Memory;
 import com.ucenfotec.text.file.GestorMapa;
 import com.ucenfotec.text.file.ImprimirNombrePartidas;
+import com.ucenfotec.personajes.*;
 
 public class ProyectoPatronesMovementUI {
     
 	static BufferedReader   in = new BufferedReader(new InputStreamReader(System.in));
     static PrintStream      out = System.out;
-        
+    static Heroe personaje = new Heroe("Kevin", 20, 20, 20);
+    static Map mapa = null;
+    static Coordenada posicion;
     public static void main(String[] args) throws IOException{                               	
                 
     	int opcion = -1; 
@@ -89,7 +92,7 @@ public class ProyectoPatronesMovementUI {
 	    }
 	}			
 
-	private static void desplegarEstadoHeroe(Hero pHeroe) {
+	private static void desplegarEstadoHeroe(Heroe pHeroe) {
 		out.println("Nombre:" + pHeroe.getName());				
 		out.println("Vida:" + pHeroe.getHealth());		
 		out.println("Poder:" + pHeroe.getPower());

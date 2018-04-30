@@ -21,12 +21,24 @@
 			</arguments>
 		</buildCommand>
 		<buildCommand>
+<<<<<<< HEAD
+			<name>org.springframework.ide.eclipse.core.springbuilder</name>
+=======
 			<name>org.springframework.ide.eclipse.boot.validation.springbootbuilder</name>
+>>>>>>> master
 			<arguments>
 			</arguments>
 		</buildCommand>
 		<buildCommand>
+<<<<<<< HEAD
+<<<<<<< HEAD
+			<name>org.springframework.ide.eclipse.boot.validation.springbootbuilder</name>
+=======
+			<name>org.springframework.ide.eclipse.core.springbuilder</name>
+>>>>>>> master
+=======
 			<name>org.eclipse.m2e.core.maven2Builder</name>
+>>>>>>> Rogelio
 			<arguments>
 			</arguments>
 		</buildCommand>

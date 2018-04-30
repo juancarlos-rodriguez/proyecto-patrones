@@ -1,10 +1,12 @@
 package com.ucenfotec.patrones.movement;
 
+import java.io.IOException;
+
 import com.ucenfotec.patrones.logic.*;
 
 public class GestorMovement {
 	
-	public static Map moverArriba(Map pMap, Coordenada pOrigen) {
+	public static Map moverArriba(Map pMap, Coordenada pOrigen) throws IOException {
 		Map mapa = pMap;		
 		
 		if(MovimientoValido.validarArriba(pOrigen)) {
@@ -21,7 +23,7 @@ public class GestorMovement {
 		return mapa;
 	}
 	
-	public static Map moverAbajo(Map pMap, Coordenada pOrigen) {
+	public static Map moverAbajo(Map pMap, Coordenada pOrigen) throws IOException {
 		Map mapa = pMap;		
 		
 		if(MovimientoValido.validarAbajo(pOrigen)) {
@@ -37,7 +39,7 @@ public class GestorMovement {
 		return mapa;
 	}
 	
-	public static Map moverIzquierda(Map pMap, Coordenada pOrigen) {
+	public static Map moverIzquierda(Map pMap, Coordenada pOrigen) throws IOException {
 		Map mapa = pMap;		
 		
 		if(MovimientoValido.validarIzquierda(pOrigen)) {
@@ -53,7 +55,7 @@ public class GestorMovement {
 		return mapa;
 	}
 	
-	public static Map moverDerecha(Map pMap, Coordenada pOrigen) {
+	public static Map moverDerecha(Map pMap, Coordenada pOrigen) throws IOException {
 		Map mapa = pMap;		
 		
 		if(MovimientoValido.validarDerecha(pOrigen)) {

@@ -1,8 +1,9 @@
-package com.ucenfotec.patrones.logic;
-
+package com.ucenfotec.personajes;
 import java.util.ArrayList;
+import com.ucenfotec.patrones.logic.Item;
+import com.ucenfotec.patrones.logic.Mission;
 
-public class Hero{
+public class Heroe extends Character implements IAbility {
 	
 	private String name;
 	private int health;
@@ -11,15 +12,17 @@ public class Hero{
 	private ArrayList<Item> myItems = new ArrayList<>();
     private ArrayList<Mission> myMissions;
 
-    public Hero(String pName, int pHealth, int pExperience, int pPower) {
+
+    public Heroe(String pName, int pHealth, int pExperience, int pPower) {
 		this.name = pName;
 		this.health = pHealth;
 		this.experience = pExperience;
 		this.power = pPower;
 	}
+    
+    public Heroe() {
+	}
 	
-	public Hero() {}
-
 	public Item getObject() {
 		return null;
 	}
@@ -34,12 +37,6 @@ public class Hero{
 	}
 	
 	public void moveCharacter() {
-	}
-	
-
-	/*@Override
-	public String ability() {
-		return null;
 	}
 
     public String getName() {
@@ -67,7 +64,6 @@ public class Hero{
 		return "Character [name=" + name + ", health=" + health + ", experience=" + experience + ", power=" + power
 				+ ", myItems=" + myItems + ", myMissions=" + myMissions + "]";
 	}
-
     @Override
     public void receiveDamage(int pAttack) {
         if ((this.getHealth() - pAttack) > 0) {
@@ -78,10 +74,7 @@ public class Hero{
     }
 
 	@Override
-	public void attack(Enemy enemy) {
-		// TODO Auto-generated method stub
-		
-	}*/
-
-
+	public void attack(Character enemy) {
+		enemy.receiveDamage(this.getPower());
+	}
 }

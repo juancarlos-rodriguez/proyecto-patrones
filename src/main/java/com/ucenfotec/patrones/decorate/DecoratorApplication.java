@@ -2,11 +2,12 @@ package com.ucenfotec.patrones.decorate;
 
 import com.ucenfotec.patrones.equip.*;
 import com.ucenfotec.patrones.logic.*;
+import com.ucenfotec.personajes.Heroe;
 
 public class DecoratorApplication {
 	
     public static void main(String[] args) {
-        Hero personaje = new Hero("Hero",100,10,50);        
+        Heroe personaje = new Heroe("Hero",100,10,50);        
         
         Sword personajeConEspada = new Sword(personaje);
         
