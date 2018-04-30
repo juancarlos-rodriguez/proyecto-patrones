@@ -10,7 +10,7 @@ public class CalcularPosicion {
 		
 		for(int i=0;i<pMapa.getFilas();i++) {
 			for(int j=0;j<pMapa.getColumnas();j++) {				            
-				if(pMapa.getArena()[i][j].equals(ValorHero.obtener())) {					
+				if(pMapa.getArena()[i][j].equals(ValorHero.valorEnMapa())) {					
 					posicion.setX(i);
 					posicion.setY(j);
 				}				

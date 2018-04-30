@@ -11,7 +11,7 @@ public class Sword extends CharacterEquipment{
         this.health = pPersonaje.getHealth() + 10;
         this.experience = pPersonaje.getExperience() + 10;
         this.power = pPersonaje.getPower() + 100;        
-    }
+    }	
 	
 	public int getHealth() {
         return health;

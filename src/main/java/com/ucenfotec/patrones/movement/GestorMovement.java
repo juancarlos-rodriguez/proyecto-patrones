@@ -3,7 +3,7 @@ package com.ucenfotec.patrones.movement;
 import com.ucenfotec.patrones.logic.*;
 
 public class GestorMovement {
-
+	
 	public static Map moverArriba(Map pMap, Coordenada pOrigen) {
 		Map mapa = pMap;		
 		
