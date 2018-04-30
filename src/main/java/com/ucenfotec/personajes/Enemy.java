@@ -42,4 +42,10 @@ public class Enemy extends Character implements IAbility{
 			this.setHealth(0);
 		}
 	}
+
+	@Override
+	public void attack(Character enemy) {
+		// TODO Auto-generated method stub
+		
+	}
 }

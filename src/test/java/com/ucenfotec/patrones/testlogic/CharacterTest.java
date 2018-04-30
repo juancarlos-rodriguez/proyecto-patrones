@@ -2,7 +2,12 @@ package com.ucenfotec.patrones.testlogic;
 
 import static org.junit.Assert.*;
 import org.junit.Test;
+<<<<<<< HEAD
 
+=======
+import com.ucenfotec.patrones.logic.Enemy;
+import com.ucenfotec.patrones.logic.Hero;
+>>>>>>> master
 import com.ucenfotec.patrones.logic.GeneralManager;
 import com.ucenfotec.personajes.Heroe;
 import com.ucenfotec.personajes.Enemy;
@@ -22,5 +27,6 @@ public class CharacterTest {
     public void testAttack() {
     	newHeroe.attack(myEnemy);
         assertEquals(28, myEnemy.getHealth());
+        
     }
 }
