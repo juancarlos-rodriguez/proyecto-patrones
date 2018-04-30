@@ -19,6 +19,9 @@ public class Heroe extends Character implements IAbility {
 		this.experience = pExperience;
 		this.power = pPower;
 	}
+    
+    public Heroe() {
+	}
 	
 	public Item getObject() {
 		return null;

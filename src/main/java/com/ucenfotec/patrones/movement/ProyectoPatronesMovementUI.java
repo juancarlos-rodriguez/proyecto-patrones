@@ -15,14 +15,9 @@ public class ProyectoPatronesMovementUI {
     
 	static BufferedReader   in = new BufferedReader(new InputStreamReader(System.in));
     static PrintStream      out = System.out;
-<<<<<<< HEAD
-    
     static Heroe personaje = new Heroe("Kevin", 20, 20, 20);
     static Map mapa = null;
     static Coordenada posicion;
-=======
-        
->>>>>>> master
     public static void main(String[] args) throws IOException{                               	
                 
     	int opcion = -1; 
@@ -97,7 +92,7 @@ public class ProyectoPatronesMovementUI {
 	    }
 	}			
 
-	private static void desplegarEstadoHeroe(Hero pHeroe) {
+	private static void desplegarEstadoHeroe(Heroe pHeroe) {
 		out.println("Nombre:" + pHeroe.getName());				
 		out.println("Vida:" + pHeroe.getHealth());		
 		out.println("Poder:" + pHeroe.getPower());

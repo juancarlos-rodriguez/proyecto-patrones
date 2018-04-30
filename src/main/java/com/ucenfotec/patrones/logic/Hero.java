@@ -2,7 +2,7 @@ package com.ucenfotec.patrones.logic;
 
 import java.util.ArrayList;
 
-public class Hero extends Character implements IAttack, IAbility {
+public class Hero{
 	
 	private String name;
 	private int health;
@@ -37,7 +37,7 @@ public class Hero extends Character implements IAttack, IAbility {
 	}
 	
 
-	@Override
+	/*@Override
 	public String ability() {
 		return null;
 	}
@@ -81,7 +81,7 @@ public class Hero extends Character implements IAttack, IAbility {
 	public void attack(Enemy enemy) {
 		// TODO Auto-generated method stub
 		
-	}
+	}*/
 
 
 }
