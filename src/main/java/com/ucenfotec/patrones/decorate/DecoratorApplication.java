@@ -1,9 +1,5 @@
 package com.ucenfotec.patrones.decorate;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.io.PrintStream;
-
 import com.ucenfotec.patrones.equip.*;
 import com.ucenfotec.patrones.logic.*;
 

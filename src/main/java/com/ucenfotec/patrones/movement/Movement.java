@@ -1,5 +1,6 @@
 package com.ucenfotec.patrones.movement;
 
+import com.ucenfotec.patrones.activity.GestorActivity;
 import com.ucenfotec.patrones.logic.Coordenada;
 import com.ucenfotec.patrones.logic.Map;
 
@@ -9,7 +10,7 @@ public class Movement {
 		Map mapa = pMap;
 		String aux="";
 				
-		aux = mapa.getArena()[destino.getX()][destino.getY()];
+		aux = GestorActivity.action(mapa.getArena()[destino.getX()][destino.getY()]);
 		mapa.getArena()[destino.getX()][destino.getY()] = mapa.getArena()[origen.getX()][origen.getY()];
 		mapa.getArena()[origen.getX()][origen.getY()] = aux;				
 		

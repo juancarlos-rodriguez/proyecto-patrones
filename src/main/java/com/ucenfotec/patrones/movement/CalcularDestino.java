@@ -1,7 +1,10 @@
 package com.ucenfotec.patrones.movement;
 
+import com.ucenfotec.patrones.equip.Sword;
 import com.ucenfotec.patrones.logic.Coordenada;
+import com.ucenfotec.patrones.logic.Hero;
 import com.ucenfotec.patrones.logic.Map;
+import com.ucenfotec.patrones.memory.Memory;
 
 public class CalcularDestino {
 
@@ -23,8 +26,12 @@ public class CalcularDestino {
 			break;
 			
 			case "S":
-				System.out.println("No es posible por espacio de Espada");
-			break;
+				System.out.println("Has encontrado una Espada");				
+			return true;
+			
+			case "E":
+				System.out.println("Has encontrado un Enemigo");
+			return true;
 			
 			default:
 				System.out.println("Espacio no definido");

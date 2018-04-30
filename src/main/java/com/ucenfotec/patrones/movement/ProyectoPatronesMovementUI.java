@@ -5,8 +5,8 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintStream;
 
-import com.ucenfotec.patrones.equip.*;
 import com.ucenfotec.patrones.logic.*;
+import com.ucenfotec.patrones.memory.Memory;
 import com.ucenfotec.text.file.GestorMapa;
 import com.ucenfotec.text.file.ImprimirNombrePartidas;
 
@@ -14,10 +14,7 @@ public class ProyectoPatronesMovementUI {
     
 	static BufferedReader   in = new BufferedReader(new InputStreamReader(System.in));
     static PrintStream      out = System.out;
-    
-    static Hero personaje = new Hero();
-    static Map mapa = null;
-    static Coordenada posicion;
+        
     public static void main(String[] args) throws IOException{                               	
                 
     	int opcion = -1; 
@@ -28,7 +25,7 @@ public class ProyectoPatronesMovementUI {
                 out.println("Digite la opcion");
                 opcion = Integer.parseInt(in.readLine());
                 procesarOpcion(opcion);
-	        	if(partidaValida(mapa)) {
+	        	if(partidaValida(Memory.mapa)) {
 	        		calcularPosicionHeroe();	            	
 	            	realizarPartida();
 	            }else {
@@ -39,7 +36,8 @@ public class ProyectoPatronesMovementUI {
     }
     
     private static void realizarPartida() throws IOException {
-    	int opcionJugador;
+    	int opcionJugador;    
+    	Memory.datosIniciales();
     	do {
     		menuJugador();            
             opcionJugador = Integer.parseInt(in.readLine());
@@ -49,34 +47,36 @@ public class ProyectoPatronesMovementUI {
 
 	private static void procesarMovimiento(int pOpcionJugador) throws IOException{
 		
-    switch (pOpcionJugador)
+    Coordenada Destino=Memory.posicion;
+		
+	switch (pOpcionJugador)
     {
         case 1:
-    		out.println("Heroe");
+    		desplegarEstadoHeroe(Memory.heroe);
         	break;
         case 2:
         	out.println("Mostrando mapa");
-        	out.println(mapa.getName());        	
-        	out.println(mapa.arenaToString());
+        	out.println(Memory.mapa.getName());        	
+        	out.println(Memory.mapa.arenaToString());
         	break;
         case 3:
         	out.println("Moviendo hacia arriba");
-        	mapa = GestorMovement.moverArriba(mapa,posicion);
+        	Memory.mapa = GestorMovement.moverArriba(Memory.mapa,Memory.posicion);
         	calcularPosicionHeroe();
         	break;
         case 4:
         	out.println("Moviendo hacia abajo");
-        	mapa = GestorMovement.moverAbajo(mapa,posicion);
+        	Memory.mapa = GestorMovement.moverAbajo(Memory.mapa,Memory.posicion);
         	calcularPosicionHeroe();
         	break;
         case 5:
         	out.println("Moviendo hacia la izquierda");
-        	mapa = GestorMovement.moverIzquierda(mapa,posicion);
+        	Memory.mapa = GestorMovement.moverIzquierda(Memory.mapa,Memory.posicion);
         	calcularPosicionHeroe();
         	break;
         case 6:
         	out.println("Moviendo hacia la derecha");
-        	mapa = GestorMovement.moverDerecha(mapa,posicion);
+        	Memory.mapa = GestorMovement.moverDerecha(Memory.mapa,Memory.posicion);
         	calcularPosicionHeroe();
         	break;        
         case 0:
@@ -88,6 +88,13 @@ public class ProyectoPatronesMovementUI {
 
 	    }
 	}			
+
+	private static void desplegarEstadoHeroe(Hero pHeroe) {
+		out.println("Nombre:" + pHeroe.getName());				
+		out.println("Vida:" + pHeroe.getHealth());		
+		out.println("Poder:" + pHeroe.getPower());
+		out.println("Experiencia:" + pHeroe.getExperience());		
+	}
 
 	private static void menuJugador() {
 		out.println("\n MENU DE JUGADOR");
@@ -102,7 +109,7 @@ public class ProyectoPatronesMovementUI {
 	}
 
 	private static void calcularPosicionHeroe() {    	    
-    	posicion = CalcularPosicion.obtenerPosicionHero(mapa);		
+		Memory.posicion = CalcularPosicion.obtenerPosicionHero(Memory.mapa);		
 	}
 
 	public static void procesarOpcion(int pOpcion) throws java.io.IOException{
@@ -115,7 +122,7 @@ public class ProyectoPatronesMovementUI {
                 	out.println(ImprimirNombrePartidas.imprimir());
                 	out.println( "Digite el nombre de partida a cargar");
                 	String mapaNombre = in.readLine();                	
-                	mapa = GestorMapa.cargarMapa(mapaNombre);                	                	
+                	Memory.mapa = GestorMapa.cargarMapa(mapaNombre);                	                	
                 }
                 catch(IOException e)
                 {
