@@ -63,11 +63,6 @@ public class Map implements IGround {
 	public void setArena(String[][] pArena) {
 		this.arena = pArena;
 	}
-
-	public void imprimirMapa(){
-		System.out.println("nombre=" + name);
-		imprimirArena();
-	}
 	
 	public String arenaToString() {
 		

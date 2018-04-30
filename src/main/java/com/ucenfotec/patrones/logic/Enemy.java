@@ -1,6 +1,6 @@
 package com.ucenfotec.patrones.logic;
 
-public class Enemy {
+public class Enemy extends Character{
 	private String name;
 	private int health;
 	private int power;
@@ -39,6 +39,11 @@ public class Enemy {
 	@Override
 	public String toString() {
 		return "Enemy [name=" + name + ", health=" + health + ", power=" + power + "]";
+	}
+
+	public void receiveDamage(int power2) {
+		// TODO Auto-generated method stub
+		
 	}
 
 //	@Override

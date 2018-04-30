@@ -11,6 +11,7 @@ public class CargarMapa {
    public static Map buscarMapa(String pNombre)
    {
 	   Map mapaJuego = new Map(pNombre);
+	   Map mapaEncontrado = null;
        try
        {    	      	   
            FileReader reader = new FileReader("savedmaps.txt");
@@ -23,14 +24,14 @@ public class CargarMapa {
            String terreno [][]= new String[mapaJuego.getFilas()][mapaJuego.getColumnas()];
            
            while((datos = buffer.readLine()) != null)
-           {
-        	
+           {        	   
                if(datos.equals(nombreMapa)||encontrado==true) {
+            	   mapaEncontrado = new Map(pNombre);
             	   
             	   if(datos.equals("End")) {
-            		   mapaJuego.setName(pNombre);
-            		   mapaJuego.setArena(terreno);
-            		   return mapaJuego;
+            		   mapaEncontrado.setName(pNombre);
+            		   mapaEncontrado.setArena(terreno);
+            		   return mapaEncontrado;
             	   }
             	   if(datos.length()==mapaJuego.getColumnas()) {            		               		   
             		   for(int i=0;i<mapaJuego.getColumnas();i++) {
@@ -52,6 +53,6 @@ public class CargarMapa {
            e.printStackTrace();
        }
 	
-	return mapaJuego;
+	return mapaEncontrado;
    }
 }
