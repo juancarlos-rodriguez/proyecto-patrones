@@ -9,13 +9,14 @@ import com.ucenfotec.patrones.equip.*;
 import com.ucenfotec.patrones.logic.*;
 import com.ucenfotec.text.file.GestorMapa;
 import com.ucenfotec.text.file.ImprimirNombrePartidas;
+import com.ucenfotec.personajes.*;
 
 public class ProyectoPatronesMovementUI {
     
 	static BufferedReader   in = new BufferedReader(new InputStreamReader(System.in));
     static PrintStream      out = System.out;
     
-    static Hero personaje = new Hero();
+    static Heroe personaje = new Heroe("Kevin", 20, 20, 20);
     static Map mapa = null;
     static Coordenada posicion;
     public static void main(String[] args) throws IOException{                               	
