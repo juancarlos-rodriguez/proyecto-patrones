@@ -8,14 +8,14 @@ import java.util.ArrayList;
 public class GeneralManager {
 	public boolean createCharacter(String pName, int pHealth, int pExperience, int pPower){
         boolean valid;
-        ArrayList<Character> characterList = new ArrayList<>();
-        Character newCharacter = new Character(pName, pHealth, pExperience, pPower);
+        ArrayList<Hero> characterList = new ArrayList<>();
+        Hero newCharacter = new Hero(pName, pHealth, pExperience, pPower);
         characterList.add(newCharacter);
         
         try {
         	FileWriter fw = new FileWriter("characters.txt", false);
         	BufferedWriter bw = new BufferedWriter(fw);
-        	for(Character ch : characterList) {
+        	for(Hero ch : characterList) {
         		bw.write(ch.toString());
         		bw.newLine();
         	}

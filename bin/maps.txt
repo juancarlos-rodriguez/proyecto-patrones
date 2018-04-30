@@ -1,1 +1,0 @@
-Map [name=mapa mundi, arena=[[Ljava.lang.String;@5ca881b5, [Ljava.lang.String;@24d46ca6, [Ljava.lang.String;@4517d9a3, [Ljava.lang.String;@372f7a8d, [Ljava.lang.String;@2f92e0f4, [Ljava.lang.String;@28a418fc, [Ljava.lang.String;@5305068a, [Ljava.lang.String;@1f32e575], mapItems=null, mapMissions=null]

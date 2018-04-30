@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 Character [name=Zeus, health=100, experience=5, power=5, myItems=[], myMissions=[]]
+=======
+Character [name=Character1, health=100, experience=5, power=5, myItems=[], myMissions=null]
+>>>>>>> master
