@@ -70,7 +70,9 @@ public class GestorActivity {
 				personaje.attack(knight);
 				out.println("Has atacado con un poder de: "+ personaje.getPower());
 				for(int i = 0; i < 10; i++) {
-					out.println("*");
+					for(int j = 0; j < i; j++) {
+						out.println("*");
+					}
 				}
 				out.println("Has derrotado al enemigo!! Hurra!!!");
 			}
